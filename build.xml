@@ -1,0 +1,227 @@
+<project name="GETAssoc" default="all" basedir=".">
+  <property file="build.properties"/>
+  <property environment="env"/>
+
+  <condition property="isUnix">
+    <os family="unix"/>
+  </condition>
+
+  <target name="all" depends="clean, init, expat, icu, darts, chasen, ipadic, convert, stmd, getassoc, gss3, iptables, itb, final_message"/>
+
+  <target name="clean">
+    <delete dir="${src}"/>
+    <exec executable="/etc/init.d/httpd">
+      <arg line="stop"/>
+    </exec>
+    <exec executable="chkconfig">
+      <arg line="httpd off"/>
+    </exec>
+  </target>
+
+  <target name="init">
+    <property environment="env"/>
+<!--
+    <echo file="/etc/bashrc" message="export GETAROOT=/usr/local/geta&#x0A;" append="yes"/>
+    <exec executable="source">
+      <arg line="~/.bashrc"/>
+    </exec>
+-->
+    <mkdir dir="${src}"/>
+    <exec executable="setenforce">
+      <arg line="0"/>
+    </exec>
+    <exec executable="yum">
+      <arg line="-y install gcc gcc-c++ bison expat-devel libicu-devel rpm-build httpd"/>
+    </exec>
+  </target>
+
+  <target name="expat">
+    <get src="${src_expat}" dest="${dst_expat}" usetimestamp="true"/>
+    <exec dir="${src}" executable="tar">
+      <arg line="zxf ${expat}"/>
+    </exec>
+    <exec dir="${src}/${expat_prefix}" executable="./configure">
+      <arg line="--prefix=/usr/local"/>
+    </exec>
+    <exec dir="${src}/${expat_prefix}" executable="make">
+    </exec>
+    <exec dir="${src}/${expat_prefix}" executable="make">
+      <arg line="install"/>
+    </exec>
+    <echo file="/etc/ld.so.conf.d/getassoc.conf" message="/usr/local/lib&#x0A;"/>
+    <exec executable="ldconfig"/>
+  </target>
+
+  <target name="icu">
+    <get src="${src_icu}" dest="${dst_icu}" usetimestamp="true"/>
+
+    <exec dir="${src}" executable="tar">
+      <arg line="zxf ${icu}"/>
+    </exec>
+    <exec dir="${src}/icu/source/" executable="./configure">
+    </exec>
+    <exec dir="${src}/icu/source/" executable="make">
+    </exec>
+    <exec dir="${src}/icu/source/" executable="make">
+      <arg line="install"/>
+    </exec>
+    <exec executable="ldconfig"/>
+  </target>
+
+  <target name="darts">
+    <get src="${src_darts}" dest="${dst_darts}" usetimestamp="true"/>
+
+    <exec dir="${src}" executable="tar">
+      <arg line="xzf ${darts}"/>
+    </exec>
+    <exec dir="${src}/${darts_prefix}" executable="./configure">
+    </exec>
+    <exec dir="${src}/${darts_prefix}" executable="make">
+    </exec>
+    <exec dir="${src}/${darts_prefix}" executable="make">
+      <arg line="install"/>
+    </exec>
+  </target>
+
+  <target name="chasen">
+    <get src="${src_chasen}" dest="${dst_chasen}" usetimestamp="true"/>
+
+    <exec dir="${src}" executable="tar">
+      <arg line="zxf ${chasen}"/>
+    </exec>
+    <exec dir="${src}/${chasen_prefix}" executable="./configure">
+    </exec>
+    <exec dir="${src}/${chasen_prefix}" executable="make">
+    </exec>
+    <exec dir="${src}/${chasen_prefix}" executable="make">
+      <arg line="install"/>
+    </exec>
+    <exec executable="ldconfig"/>
+  </target>
+
+  <target name="ipadic">
+    <get src="${src_ipadic}" dest="${dst_ipadic}" usetimestamp="true"/>
+
+    <exec dir="${src}" executable="tar">
+      <arg line="zxf ${ipadic}"/>
+    </exec>
+    <exec dir="${src}/${ipadic_prefix}" executable="./configure">
+    </exec>
+  </target>
+
+  <target name="convert">
+    <copy file="convert.sh" todir="${src}/${ipadic_prefix}"/>
+    <exec executable="chmod">
+      <arg line="+x ${src}/${ipadic_prefix}/convert.sh"/>
+    </exec>
+    <exec executable="./convert.sh" dir="${src}/${ipadic_prefix}">
+    </exec>
+    <exec executable="chasen-config" outputproperty="chasen_path">
+      <arg line="--mkchadic"/>
+    </exec>
+    <exec executable="${chasen_path}/makemat" dir="${src}/${ipadic_prefix}" >
+      <arg line="-i w"/>
+    </exec>
+    <exec executable="${chasen_path}/makeda" dir="${src}/${ipadic_prefix}">
+      <arg line="-i w chadic ${src}/${ipadic_prefix}/*.dic"/>
+    </exec>
+    <exec executable="make">
+      <arg line="install"/>
+    </exec>
+    <exec executable="iconv" dir="${src}/${ipadic_prefix}">
+      <arg line="-f euc-jp -t utf-8 chasenrc > chasenrc.tmp"/>
+    </exec>
+    <move file="${src}/${ipadic_prefix}/chasenrc.tmp" tofile="/usr/local/etc/chasenrc"/>
+  </target>
+
+  <target name="stmd">
+    <get src="${src_stmd}" dest="${dst_stmd}" usetimestamp="true"/>
+
+    <exec dir="${src}" executable="tar">
+      <arg line="zxf ${stmd}"/>
+    </exec>
+    <exec dir="${src}/${stmd_prefix}" executable="./configure">
+      <arg line="--with-defaultstemmer=CHASEN --enable-chasen=yes"/>
+    </exec>
+    <exec dir="${src}/${stmd_prefix}" executable="make">
+    </exec>
+    <exec dir="${src}/${stmd_prefix}" executable="make">
+      <arg line="install"/>
+    </exec>
+    <exec dir="${src}/${stmd_prefix}/t" executable="./chk">
+      <arg line="tst2.xml"/>
+    </exec>
+  
+    <echo file="/etc/syslog.conf" message="#stmd&#x0A;" append="yes"/>
+    <echo file="/etc/syslog.conf" message="local0.* /var/log/stmd.log&#x0A;" append="yes"/>
+
+    <exec dir="${src}" executable="touch">
+      <arg line="/var/log/stmd.log"/>
+    </exec>
+    <exec dir="/sbin" executable="service">
+      <arg line="syslog restart"/>
+    </exec>
+    <exec dir="${src}" executable="stmd">
+      <arg line="-d -u /tmp/stmd.sock"/>
+    </exec>
+  </target>
+
+  <target name="getassoc">
+    <get src="${src_getassoc}" dest="${dst_getassoc}" usetimestamp="true"/>
+
+    <exec dir="${src}" executable="tar">
+      <arg line="zxf ${getassoc}"/>
+    </exec>
+    <exec dir="${src}/${getassoc_prefix}" executable="./configure">
+      <arg line="--prefix=/home/getassoc/g"/>
+    </exec>
+    <exec dir="${src}/${getassoc_prefix}" executable="make">
+    </exec>
+    <exec dir="${src}/${getassoc_prefix}" executable="make">
+      <arg line="install"/>
+    </exec>
+    <echo file="/etc/httpd/conf.d/getassoc.conf" message='ScriptAlias /getassoc/ "/home/getassoc/g/wbin/getassoc/"'/>
+    <exec dir="${src}" executable="chmod">
+      <arg line="755 /home/getassoc/"/>
+    </exec>
+    <antcall target="httpd"/>
+  </target>
+
+  <target name="gss3">
+    <mkdir dir="${geta_client_dir}"/>
+    <get src="${src_load.gif}" dest="${dst_load.gif}" usetimestamp="true"/>
+    <get src="${src_gss3_html}" dest="${dst_gss3_html}" usetimestamp="true"/>
+    <get src="${src_gss3_js}" dest="${dst_gss3_js}" usetimestamp="true"/>
+    <replace file="${dst_gss3_js}" dir="${geta_client_dir}" token="gss3.url = 'http://getassoc.cs.nii.ac.jp/getassoc/gss3';" value="gss3.url = 'http://${ip_address}/getassoc/gss3';"/>
+  </target>
+
+  <target name="httpd">
+    <exec executable="/etc/init.d/httpd">
+      <arg line="start"/>
+    </exec>
+    <exec executable="chkconfig">
+      <arg line="httpd on"/>
+    </exec>
+  </target>
+
+  <target name="iptables">
+    <exec executable="iptables" dir="/sbin">
+      <arg line="-I INPUT 5 -p tcp --dport http -j ACCEPT"/>
+    </exec>
+    <exec executable="iptables" dir="/sbin">
+      <arg line="-I INPUT 5 -p tcp --dport https -j ACCEPT"/>
+    </exec>
+    <exec executable="service" dir="/sbin">
+      <arg line="iptables save"/>
+    </exec>
+  </target>
+
+  <target name="itb">
+    <mkdir dir="${getaroot}"/>
+  </target>
+
+  <target name="final_message">
+    <echo message="###&#x0A;###&#x0A;###&#x0A;Access to http://localhost/gss3.html?property=hoge&#x0A;###&#x0A;###&#x0A;###&#x0A;"/>
+  </target>
+
+</project>
