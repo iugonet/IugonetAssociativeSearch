@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# Start, Stop and Restart For Stmd
+#
+# chkconfig: 345 84 16
+# description: Stmd is a simple wrapper for stemmers such as ChaSen.
+
+PID_FILE=/var/run/stmd.pid
+
+start() {
+    PROC=`ps ax | grep -v grep | grep stmd | wc -l`
+    if [ ${PROC} -eq 0 ]; then
+	echo "Starting stmd :"
+	/usr/local/bin/stmd -d -u /tmp/stmd.sock
+	`sleep 5`
+	`ps ax | grep -v grep | grep stmd | awk '{print $1}' > ${PID_FILE}`
+    else
+	echo "This Running Stmd......"
+    fi
+}
+
+stop() {
+    PROC=`ps ax | grep -v grep | grep stmd | wc -l`
+    if [ ${PROC} -eq 0 ]; then
+	echo "Stop stmd :"
+	if [ -f ${PID_FILE} ];then
+	    rm ${PID_FILE}
+	fi
+    else
+	echo "Stopping Stmd Server:"
+	/usr/local/bin/stmd stop
+	if [ -f ${PID_FILE} ];then
+	    rm ${PID_FILE}
+	fi
+    fi
+}
+
+restart() {
+    stop
+    sleep 5
+    start
+}
+
+# See how we were called.
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart)
+	restart
+	;;
+    *)
+    echo $"Usage: $0 {start|stop|restart}"
+    exit 1
+
+esac
+exit 0

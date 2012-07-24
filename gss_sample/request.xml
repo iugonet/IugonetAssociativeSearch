@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gss version="3.0" xmlns="http://gss3.cs.nii.ac.jp/">
+  <assoc target="sample" niwords="70" cutoff-df="0" stage1-sim="WT_SMARTAW" narticles="10" nkeywords="10" yykn="10" nacls="1" nkcls="1" a-offset="0" a-props="title" cross-ref="aw" stage2-sim="WT_SMARTWA">
+    <freetext cutoff-df="0" stemmer="auto">Active Region</freetext>
+  </assoc>
+</gss>

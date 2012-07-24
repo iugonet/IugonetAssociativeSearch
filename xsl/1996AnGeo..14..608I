@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<!--RAW FILE-->
+<head>
+<base href="http://ads.nao.ac.jp/abs/1996AnGeo..14..608I" />
+<link rel="canonical" content="http://ads.nao.ac.jp/abs/1996AnGeo..14..608I" />
+<meta name="robots" content="noarchive" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<TITLE>Decay of the Dst field of geomagnetic disturbance after substorm onset and its i</TITLE>
+<meta name="citation_language" content="en" />
+<meta name="citation_doi" content="10.1007/s00585-996-0608-3" />
+<meta name="citation_abstract_html_url" content="http://ads.nao.ac.jp/abs/1996AnGeo..14..608I" />
+<meta name="citation_title" content="Decay of the Dst field of geomagnetic disturbance after substorm onset and its implication to storm-substorm relation" />
+<meta name="citation_authors" content="Iyemori, T.; Rao, D. R. K." />
+<meta name="citation_issn" content="0992-7689" />
+<meta name="citation_date" content="06/1996" />
+<meta name="citation_journal_title" content="Annales Geophysicae" />
+<meta name="citation_volume" content="14" />
+<meta name="citation_firstpage" content="608" />
+<meta name="citation_lastpage" content="618" />
+<link title="schema(PRISM)" rel="schema.prism" href="http://prismstandard.org/namespaces/1.2/basic/" />
+<meta name="prism.publicationName" content="Annales Geophysicae" />
+<meta name="prism.issn" content="0992-7689" />
+<meta name="prism.volume" content="14" />
+<meta name="prism.startingPage" content="608" />
+<meta name="prism.endingPage" content="618" />
+<link title="schema(DC)" rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+<meta name="dc.language" content="en" />
+<meta name="dc.identifier" content="doi:10.1007/s00585-996-0608-3" />
+<meta name="dc.date" content="1996-06" />
+<meta name="dc.source" content="Annales Geophysicae, vol. 14, Issue 6, pp.608-618" />
+<meta name="dc.title" content="Decay of the Dst field of geomagnetic disturbance after substorm onset and its implication to storm-substorm relation" />
+<meta name="dc.creator" content="Iyemori, T." />
+<meta name="dc.creator" content="Rao, D. R. K." />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<SCRIPT language="JavaScript" type="text/javascript">
+<!-- Begin
+function mkemail(parts) {
+    var sep = ".";
+    var str = arguments[0];
+    for ( var i = 1 ; i < arguments.length ; i++ ) {
+        if ( arguments[i] == "" ) {
+            sep = String.fromCharCode(29+35) ;
+           continue ;
+        } else {
+            str = str.concat ( sep ) ;
+            str = str.concat ( arguments[i] ) ;
+            sep = ".";
+        }
+    }
+    return(str);
+}
+var toggle = 0 ;
+function t(){
+if ( toggle == 0 ) {
+setStyleByClass("span","a","backgroundColor","#ffffff");
+setStyleByClass("div","h","backgroundColor","#ffffff");
+setStyleByClass("div","h","opacity","0");
+setStyleByClass("div","h","filter","alpha(opacity=0)");
+setStyleByClass("span","b","backgroundColor","#ffffff");
+setStyleByClass("div","i","backgroundColor","#ffffff");
+setStyleByClass("div","i","opacity","0");
+setStyleByClass("div","i","filter","alpha(opacity=0)");
+setStyleByClass("span","c","backgroundColor","#ffffff");
+setStyleByClass("div","j","backgroundColor","#ffffff");
+setStyleByClass("div","j","opacity","0");
+setStyleByClass("div","j","filter","alpha(opacity=0)");
+setStyleByClass("span","d","backgroundColor","#ffffff");
+setStyleByClass("div","k","backgroundColor","#ffffff");
+setStyleByClass("div","k","opacity","0");
+setStyleByClass("div","k","filter","alpha(opacity=0)");
+setStyleByClass("span","e","backgroundColor","#ffffff");
+setStyleByClass("div","l","backgroundColor","#ffffff");
+setStyleByClass("div","l","opacity","0");
+setStyleByClass("div","l","filter","alpha(opacity=0)");
+setStyleByClass("span","f","backgroundColor","#ffffff");
+setStyleByClass("div","m","backgroundColor","#ffffff");
+setStyleByClass("div","m","opacity","0");
+setStyleByClass("div","m","filter","alpha(opacity=0)");
+setStyleByClass("span","g","backgroundColor","#ffffff");
+setStyleByClass("div","n","backgroundColor","#ffffff");
+setStyleByClass("div","n","opacity","0");
+setStyleByClass("div","n","filter","alpha(opacity=0)");
+toggle = 1 ;
+} else {
+setStyleByClass("span","a","backgroundColor","#ffff88");
+setStyleByClass("div","h","backgroundColor","#ffff00");
+setStyleByClass("div","h","opacity","0.3");
+setStyleByClass("div","h","filter","alpha(opacity=30)");
+setStyleByClass("span","b","backgroundColor","#ccccff");
+setStyleByClass("div","i","backgroundColor","#3333ff");
+setStyleByClass("div","i","opacity","0.3");
+setStyleByClass("div","i","filter","alpha(opacity=30)");
+setStyleByClass("span","c","backgroundColor","#ffcccc");
+setStyleByClass("div","j","backgroundColor","#ff3333");
+setStyleByClass("div","j","opacity","0.3");
+setStyleByClass("div","j","filter","alpha(opacity=30)");
+setStyleByClass("span","d","backgroundColor","#bbffff");
+setStyleByClass("div","k","backgroundColor","#00ffff");
+setStyleByClass("div","k","opacity","0.3");
+setStyleByClass("div","k","filter","alpha(opacity=30)");
+setStyleByClass("span","e","backgroundColor","#ffdd77");
+setStyleByClass("div","l","backgroundColor","#ff6600");
+setStyleByClass("div","l","opacity","0.3");
+setStyleByClass("div","l","filter","alpha(opacity=30)");
+setStyleByClass("span","f","backgroundColor","#ccffaa");
+setStyleByClass("div","m","backgroundColor","#33ff00");
+setStyleByClass("div","m","opacity","0.3");
+setStyleByClass("div","m","filter","alpha(opacity=30)");
+setStyleByClass("span","g","backgroundColor","#ffccff");
+setStyleByClass("div","n","backgroundColor","#ff00ff");
+setStyleByClass("div","n","opacity","0.3");
+setStyleByClass("div","n","filter","alpha(opacity=30)");
+toggle = 0 ;
+}
+}
+var ie = (document.all) ? true : false;
+
+function setStyleByClass(t,c,p,v){
+	var elements;
+	if(t == '*') {
+		elements = (ie) ? document.all : document.getElementsByTagName('*');
+	} else {
+		elements = document.getElementsByTagName(t);
+	}
+	for (var i = 0; i < elements.length; i++)
+    {
+		var node = elements.item(i);
+		for(var j = 0; j < node.attributes.length; j++)
+		{
+			if(node.attributes.item(j).nodeName == 'class')
+			{
+				if(node.attributes.item(j).nodeValue == c)
+				{
+				eval('node.style.' + p + " = '" +v + "'");
+				}
+			}
+		}
+	}
+}
+//  End -->
+</SCRIPT>
+<style>.a{background-color: #ffff88}</style>
+<style>.h{background-color: #ffff00}</style>
+<style>.b{background-color: #ccccff}</style>
+<style>.i{background-color: #3333ff}</style>
+<style>.c{background-color: #ffcccc}</style>
+<style>.j{background-color: #ff3333}</style>
+<style>.d{background-color: #bbffff}</style>
+<style>.k{background-color: #00ffff}</style>
+<style>.e{background-color: #ffdd77}</style>
+<style>.l{background-color: #ff6600}</style>
+<style>.f{background-color: #ccffaa}</style>
+<style>.m{background-color: #33ff00}</style>
+<style>.g{background-color: #ffccff}</style>
+<style>.n{background-color: #ff00ff}</style>
+<style type="text/css">
+a:link {color: #0000ff}
+a.oa:link {color: #00a000}
+a:visited {color: #4000a0}
+a.oa:visited {color: #006666}
+a:hover {color: #ff0000}
+a.oa:hover {color: #cc33cc}
+</style>
+</head>
+<body bgcolor="#ffffff"  text="#000000" link="#0000ff" alink="#ff0000" vlink="#4000a0">
+<div align="right" style="font-size:84%;padding-bottom:4px"><a href="http://ads.nao.ac.jp/cgi-bin/nph-manage_account?man_cmd=login&amp;man_url=http://ads.nao.ac.jp/abs/1996AnGeo..14..608I">Sign on</a></div>
+<p><h3><A HREF="http://ads.nao.ac.jp/">SAO/NASA ADS</a> <a href="http://ads.nao.ac.jp/abstract_service.html">Astronomy Abstract Service</A></h3>
+<hr>
+<p>
+<dl>
+<dt><table width="100%"><tr><td align="left"><strong>&#183; <a href="http://ads.nao.ac.jp/cgi-bin/nph-abs_connect?return_req=no_params&amp;arxiv_sel=ALL&amp;db_key=AST&amp;text=In%20order%20to%20investigate%20the%20causal%20relationship%20between%20magnetic%20storms%0aand%20substorms,%20variations%20of%20the%20mid-latitude%20geomagnetic%20indices,%20ASY%0a%28asymmetric%20part%29%20and%20SYM%20%28symmetric%20part%29,%20at%20substorm%20onsets%20are%0aexamined.%20Substorm%20onsets%20are%20defined%20by%20three%20different%20phenomena%3b%20%281%29%0aa%20rapid%20increase%20in%20the%20mid-latitude%20asymmetric-disturbance%20indices,%0aASY-D%20and%20ASY-H,%20with%20a%20shape%20of%20so-called%20%60mid-latitude%20positive%20bay%5c%27%3b%0a%282%29%20a%20sharp%20decrease%20in%20the%20AL%20index%3b%20%283%29%20an%20onset%20of%20Pi2%20geomagnetic%0apulsation.%20The%20positive%20bays%20are%20selected%20using%20eye%20inspection%20and%20a%0apattern-matching%20technique.%20The%201-min-resolution%20SYM-H%20index,%20which%20is%0aessentially%20the%20same%20as%20the%20hourly%20Dst%20index%20except%20in%20terms%20of%20the%20time%0aresolution,%20does%20not%20show%20any%20statistically%20significant%20development%0aafter%20the%20onset%20of%20substorms%3b%20it%20tends%20to%20decay%20after%20the%20onset%20rather%0athan%20to%20develop.%20It%20is%20suggested%20by%20a%20simple%20model%20calculation%20that%20the%0adecay%20of%20the%20magnetospheric%20tail%20current%20after%20substorm%20onset%20is%0aresponsible%20for%20the%20decay%20of%20the%20Dst%20field.%20The%20relation%20between%20the%20IMF%0asouthward%20turning%20and%20the%20development%20of%20the%20Dst%20field%20is%20re-examined.%0aThe%20results%20support%20the%20idea%20that%20the%20geomagnetic%20storms%20and%20substorms%0aare%20independent%20processes%3b%20that%20is,%20the%20ring-current%20development%20is%20not%0athe%20result%20of%20the%20frequent%20occurrence%20of%20substorms,%20but%20that%20of%20enhanced%0aconvection%20caused%20by%20the%20large%20southward%20IMF.%20A%20substorm%20is%20the%20process%0aof%20energy%20dissipation%20in%20the%20magnetosphere,%20and%20its%20contribution%20to%20the%0astorm-time%20ring-current%20formation%20seems%20to%20be%20negligible.%20The%20decay%20of%0athe%20Dst%20field%20after%20a%20substorm%20onset%20is%20explained%20by%20a%20magnetospheric%0aenergy%20theorem.%20Acknowledgements.%20This%20study%20is%20supported%20in%20part%20by%20the%0aMinistry%20of%20Education,%20Science,%20Sports,%20and%20Culture%20in%20Japan,%20under%20a%0aGrant-in-Aid%20for%20Scientific%20Research%20%28Category%20B%29.%20%20Topical%20Editor%20D.%0aAlcayd%26eacute%3b%20thanks%20M.%20Lockwood%20and%20N.%20J.%20Fox%20for%20their%20help%20in%0aevaluating%20this%20paper.-%26gt%3b%20%20Correspondence%20to%3a%20%20Y.%20Kamide-%26gt%3b%0a+&amp;title=Decay%20of%20the%20Dst%20field%20of%20geomagnetic%20disturbance%20after%20substorm%20onset%20and%20its%20implication%20to%20storm-substorm%20relation">Find Similar Abstracts</a> (with <a href="#feedback">default settings below</a>)</strong></td>
+<td align="right"><button onclick="t();">Toggle Highlighting</button></td>
+</tr></table>
+<dt><strong>· <a class="oa" href="http://ads.nao.ac.jp/cgi-bin/nph-data_query?bibcode=1996AnGeo..14..608I&amp;link_type=EJOURNAL&amp;db_key=AST&amp;high=515bdb38a408876">Electronic Refereed Journal Article (HTML)</a></strong>
+<dt><strong>· <a class="oa" href="http://ads.nao.ac.jp/cgi-bin/nph-data_query?bibcode=1996AnGeo..14..608I&amp;link_type=ARTICLE&amp;db_key=AST&amp;high=515bdb38a408876">Full Refereed Journal Article (PDF/Postscript)</a></strong>
+<dt><strong>· <a  href="http://ads.nao.ac.jp/cgi-bin/nph-data_query?bibcode=1996AnGeo..14..608I&amp;link_type=REFERENCES&amp;db_key=AST&amp;high=515bdb38a408876">References in the article</a></strong>
+<dt><strong>· <a href="http://ads.nao.ac.jp/cgi-bin/nph-data_query?bibcode=1996AnGeo..14..608I&amp;link_type=CITATIONS&amp;db_key=AST">Citations to the Article (130)</strong></a> (<a href="http://ads.nao.ac.jp/cgi-bin/nph-ref_history?refs=CITATIONS&amp;bibcode=1996AnGeo..14..608I">Citation History</a>)
+<dt><strong>· <a  href="http://ads.nao.ac.jp/cgi-bin/nph-data_query?bibcode=1996AnGeo..14..608I&amp;link_type=REFCIT&amp;db_key=AST&amp;high=515bdb38a408876">Refereed Citations to the Article</a></strong>
+<dt><strong>· <a href="http://ads.nao.ac.jp/cgi-bin/nph-data_query?bibcode=1996AnGeo..14..608I&amp;link_type=AR&amp;db_key=AST">Also-Read Articles</a></strong> (<a href="http://ads.nao.ac.jp/cgi-bin/nph-ref_history?refs=AR&amp;bibcode=1996AnGeo..14..608I">Reads History</a>)
+<dt>&#183;
+<dt><strong>&#183; <a href="http://www.microsofttranslator.com/BV.aspx?from=en&amp;a=http://ads.nao.ac.jp/abs/1996AnGeo..14..608I">Translate This Page</a></strong>
+
+</dl>
+<table>
+<tr><td nowrap valign="top" align="left"><b>Title:</b></td><td><br></td><td align="left" valign="top">Decay of the Dst field of geomagnetic disturbance after substorm onset and its implication to storm-substorm relation</td></tr>
+<tr><td nowrap valign="top" align="left"><b>Authors:</b></td><td><br></td><td align="left" valign="top"><a href="http://ads.nao.ac.jp/cgi-bin/author_form?author=Iyemori,+T&amp;fullauthor=Iyemori,%20T.&amp;charset=UTF-8&amp;db_key=AST">Iyemori, T.</a>; <a href="http://ads.nao.ac.jp/cgi-bin/author_form?author=Rao,+D&amp;fullauthor=Rao,%20D.%20R.%20K.&amp;charset=UTF-8&amp;db_key=AST">Rao, D. R. K.</a></td></tr>
+<tr><td nowrap valign="top" align="left"><b>Publication:</b></td><td><br></td><td align="left" valign="top">Annales Geophysicae, vol. 14, Issue 6, pp.608-618 (<A href="http://www.annales-geophysicae.net">COPERNIUS Homepage</a>)</td></tr>
+<tr><td nowrap valign="top" align="left"><b>Publication Date:</b></td><td><br></td><td align="left" valign="top">06/1996</td></tr>
+<tr><td nowrap valign="top" align="left"><b>Origin:</b></td><td><br></td><td align="left" valign="top">WEB</td></tr>
+<tr><td nowrap valign="top" align="left"><b>DOI:</b></td><td><br></td><td align="left" valign="top"><A href="http://dx.doi.org/10.1007/s00585-996-0608-3">10.1007/s00585-996-0608-3</a></td></tr>
+<tr><td nowrap valign="top" align="left"><b>Bibliographic Code:</b></td><td><br></td><td align="left" valign="top"><A href="http://ads.nao.ac.jp/abs/1996AnGeo..14..608I">1996AnGeo..14..608I</a></td></tr>
+</table>
+<h3 align="center">                               Abstract</h3>
+In order to investigate the causal relationship between magnetic storms
+and substorms, variations of the mid-latitude geomagnetic indices, ASY
+(asymmetric part) and SYM (symmetric part), at substorm onsets are
+examined. Substorm onsets are defined by three different phenomena; (1)
+a rapid increase in the mid-latitude asymmetric-disturbance indices,
+ASY-D and ASY-H, with a shape of so-called `mid-latitude positive bay\';
+(2) a sharp decrease in the AL index; (3) an onset of Pi2 geomagnetic
+pulsation. The positive bays are selected using eye inspection and a
+pattern-matching technique. The 1-min-resolution SYM-H index, which is
+essentially the same as the hourly Dst index except in terms of the time
+resolution, does not show any statistically significant development
+after the onset of substorms; it tends to decay after the onset rather
+than to develop. It is suggested by a simple model calculation that the
+decay of the magnetospheric tail current after substorm onset is
+responsible for the decay of the Dst field. The relation between the IMF
+southward turning and the development of the Dst field is re-examined.
+The results support the idea that the geomagnetic storms and substorms
+are independent processes; that is, the ring-current development is not
+the result of the frequent occurrence of substorms, but that of enhanced
+convection caused by the large southward IMF. A substorm is the process
+of energy dissipation in the magnetosphere, and its contribution to the
+storm-time ring-current formation seems to be negligible. The decay of
+the Dst field after a substorm onset is explained by a magnetospheric
+energy theorem. Acknowledgements. This study is supported in part by the
+Ministry of Education, Science, Sports, and Culture in Japan, under a
+Grant-in-Aid for Scientific Research (Category B).  Topical Editor D.
+Alcaydé thanks M. Lockwood and N. J. Fox for their help in
+evaluating this paper.-&gt;  Correspondence to:  Y. Kamide-&gt;
+<hr>
+<table width=100%><tr><td align="left"><b><a href="http://ads.nao.ac.jp/cgi-bin/nph-bib_query?bibcode=1996AnGeo..14..608I&amp;data_type=BIBTEX&amp;db_key=AST&amp;nocookieset=1">Bibtex entry for this abstract</a></b>&nbsp;&nbsp;&nbsp;<b><a href="http://ads.nao.ac.jp/cgi-bin/nph-abs_connect?bibcode=1996AnGeo..14..608I&amp;data_type=Custom&amp;format=%5c%5cbibitem%5b%25%5c2m%25%28y%29%5d%25%7bR%7d%20%25%5c5.3l%20%25%5cY,%25%5cj,%25%5cV,%25%5cp%5cn&amp;return_fmt=LONG&amp;db_key=AST&amp;nocookieset=1">Preferred format for this abstract</a></b> (see <a href="http://ads.nao.ac.jp/cgi-bin/pref_set">Preferences</a>)</td>
+<td align="right"><button onclick="t();">Toggle Highlighting</button></td>
+</tr></table>
+<hr>
+<table>
+<tr><td>
+<form method="POST" action="http://ads.nao.ac.jp/cgi-bin/nph-abs_connect"><a name="private"></a>
+<input type="hidden" name="bibcode" value="1996AnGeo..14..608I">
+<input type="submit" name="library" value=" Add this article to private library ">
+</form></td>
+<td>
+<form method="POST" action="http://ads.nao.ac.jp/cgi-bin/nph-abs_connect"><a name="private"></a>
+<input type="hidden" name="bibcode" value="1996AnGeo..14..608I">
+<input type="submit" name="library" value=" Remove this article from private library ">
+</form></td>
+</tr><tr>
+
+<td>
+<form method="GET" action="http://adsabs.harvard.edu/adsfeedback/submit_abstract.html"><input type="submit" name="submit" value=" Submit corrections to this record "><input type="hidden" name="bibcode" value="1996AnGeo..14..608I"><input type="hidden" name="db_key" value="AST"></form>
+</td><td>
+<form method="GET" action="http://labs.adsabs.harvard.edu/ui/abs/1996AnGeo..14..608I"><input type="submit" value=" View record in ADSLabs ">&nbsp;<img src="/figs/new.gif" alt=" New! "/></form>
+</td></tr>
+</table>
+<hr>
+<form method="POST" action="http://ads.nao.ac.jp/cgi-bin/nph-abs_connect"><a name="feedback"></a>
+<h3>Find Similar Abstracts:</h3>
+
+<input type="hidden" name="return_req" value="no_params">
+<table>
+<tr><td>Use:</td><td>      <input type="checkbox" name="use_auth" value="YES"></td><td>  Authors</td></tr>
+<tr><td></td><td>          <input type="checkbox" checked name="use_title" value="YES"></td><td>  Title</td></tr>
+<tr><td></td><td>          <input type="checkbox" checked name="use_text" value="YES"></td><td>  Abstract Text</td></tr>
+
+<tr><td>Return:</td><td>   <input type="radio" checked name="return_req" value="feedback"></td><td>  Query Results</td><td>   Return <input name="nr_to_return" size="5" value="100">&nbsp;&nbsp;&nbsp;items starting with number <input name="start_nr" size="5" value="1"></td></tr>
+<tr><td></td><td>          <input type="radio" name="return_req" value="form"></td><td>  Query Form</td></tr>
+
+<tr><td>Database:</td><td> <input type="checkbox" checked name="db_key" value="AST"></td><td>  Astronomy</td></tr>
+<tr><td></td><td>          <input type="checkbox"  name="db_key" value="PHY"></td><td>  Physics</td></tr>
+<tr><td></td><td>          <input type="checkbox"  name="db_key" value="PRE"></td><td>  arXiv e-prints</td></tr>
+
+</table>
+
+<input type="hidden" name="arxiv_sel" value="ALL">
+<input type="hidden" name="bib_dbkey" value="AST">
+<input type="submit" name="selfeedback" value="      Send Query     ">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="      Reset      ">
+<input type="hidden" name="bibcode" value="1996AnGeo..14..608I">
+</form>
+<br><hr><br>
+</body>
+</html>

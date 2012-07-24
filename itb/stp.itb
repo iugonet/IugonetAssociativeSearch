@@ -1,0 +1,616 @@
+@description=STP Technical Term Dictionary
+@title=STP Technical Term Dictionary
+i00001
+#title=ACE
+b1Advanced Composition Explorer
+i00002
+#title=Active Region
+b1AR
+i00003
+#title=AE index
+b1The AE indices are derived from geomagnetic variations in the horizontal component observed at selected observatories along the auroral zone in the northern hemisphere.
+i00004
+#title=Airglow
+b1Airglow (also called nightglow) is the very weak emission of light by a planetary atmosphere.
+i00005
+#title=AKR
+b1Auroral kilometric radiation (AKR) is the intense radio radiation emitted in the acceleration zone (at a height of three times the radius of the Earth) of the polar lights.
+i00006
+#title=Alfven wave
+b1アルフベン波。磁場をもつプラズマ中を磁場方向に伝わる横波
+i00007
+#title=Alfven velocity
+b1アルフベン速度。VA=B/(μoρ)**(-1/2)。ここで、Bは磁場の強さ、μoは真空の透磁率、ρは、密度を表す
+i00008
+#title=AMIE
+b1Assimilative Mapping of Ionospheric Electrodynamics
+i00009
+#title=Ap index
+b1Ap指数。世界１２ヶ所の地磁気観測所の観測をもとにした地磁気活動の指数
+i00010
+#title=AU
+b1Astronomical Unit
+i00011
+#title=Aurora
+b1An aurora (plural: aurorae or auroras; from the Latin word aurora, "sunrise") is a natural light display in the sky particularly in the high latitude (Arctic and Antarctic) regions, caused by the collision of energetic charged particles with atoms in the high altitude atmosphere (thermosphere). 
+i00012
+#title=Aurora breakup
+b1オーロラ活動のメインフェーズ
+i00013
+#title=Aurora Electrojet
+b1The term 'auroral electrojet' is the name given to the large horizontal currents that flow in the D and E regions of the auroral ionosphere.
+i00014
+#title=Aurora oval
+b1オーロラ・オーバル
+i00015
+#title=Aurora zone
+b1地磁気緯度が約67度を中心とした帯状の領域。この領域ではオーロラが頻繁に見られる
+i00017
+#title=Alpha particle
+b1Alpha particles (named after and denoted by the first letter in the Greek alphabet, α) consist of two protons and two neutrons bound together into a particle identical to a helium nucleus, which is classically produced in the process of alpha decay, but may be produced also in other ways and given the same name. 
+i00018
+#title=暗条
+b1Filament
+i00019
+#title=暗部
+b1Umbra
+i00020
+#title=Bartels' rotation number
+b1太陽活動や地磁気活動の回帰的な変化をあらわすために考えられた27日を１周期としたシリアルナンバー
+i00021
+#title=BCS
+b1Bragg Crystal Spectrometer
+i00022
+#title=Bow shock
+b1A bow shock is the area between a magnetosphere and an ambient medium. For stars, this is typically the boundary between their stellar wind and the interstellar medium.
+i00023
+#title=バタフライ・ダイアグラム
+b1Butterfly diagram。蝶型図。太陽黒点が出現する緯度を太陽活動周期とともに図示したもの
+i00024
+#title=微分回転
+b1Differential rotation。回転速度が緯度によって異なるもの。太陽では、低緯度ほど自転速度が速くなっている。
+i00025
+#title=β値
+b1プラズマの圧力と磁気圧の比
+i00026
+#title=Carrington rotation
+b1The Carrington rotation of the Sun is a system for comparing locations on the Sun over a period of time, allowing the following of sunspot groups or reappearance of eruptions at a later time.
+i00027
+#title=CCD
+b1Charge Coupled Device
+i00028
+#title=CDS
+b1Coronal Diagnostic Spectrometer
+i00029
+#title=CIR
+b1Corotating Interaction Region
+i00030
+#title=Chromosphere
+b1The chromosphere (literally, "sphere of colour") is the second of the three main layers in the Sun's atmosphere and is roughly 2,000 kilometers deep. It sits just above the photosphere and just below the solar transition region.
+i00031
+#title=CME
+b1A coronal mass ejection (CME) is a massive burst of solar wind and magnetic fields rising above the solar corona or being released into space.
+i00032
+#title=CMP
+b1Central Meridian Passage
+i00033
+#title=CNA
+b1Cosmic Noise Absorption
+i00034
+#title=Conjugate points
+b1共役点。等価な磁気緯度と磁気経度を持った南北半球の地点
+i00035
+#title=Corona
+b1A corona is a type of plasma "atmosphere" of the Sun or other celestial body, extending millions of kilometers into space, most easily seen during a total solar eclipse, but also observable in a coronagraph.
+i00036
+#title=Coronagraph
+b1A coronagraph is a telescopic attachment designed to block out the direct light from a star so that nearby objects – which otherwise would be hidden in the star's bright glare – can be resolved. Most coronagraphs are intended to view the corona of the Sun, but a new class of conceptually similar instruments (called stellar coronagraphs to distinguish them from solar coronagraphs) are being used to find extrasolar planets around nearby stars.
+i00037
+#title=Coronal hole
+b1Coronal holes are areas where the Sun's corona is darker, and colder, and has lower-density plasma than average. These were found when X-ray telescopes in the Skylab mission were flown above the Earth's atmosphere to reveal the structure of the corona.
+i00038
+#title=Cosmic Ray
+b1Cosmic rays are very high energy particles, mainly originating in outer space, outside the Solar system.
+i00040
+#title=Differential rotation
+b1微分回転
+i00041
+#title=デリンジャー現象
+b1SID
+i00042
+#title=電波バースト
+b1Radio burst。太陽フレアなどに伴って観測される強い電波放射
+i00044
+#title=DSF
+b1disappearing solar filament
+i00045
+#title=DSN 
+b1Deep Space Network
+i00046
+#title=Ecliptic plane
+b1The ecliptic is the apparent path of the Sun on the celestial sphere as seen from the Earth's center, and also the plane of this path, which is essentially coplanar with the orbit of the Earth around the Sun.
+i00047
+#title=EHF
+b1Extremely High Frequency(30-300 GHz)
+i00048
+#title=EIT
+b1Extreme Ultra-Violet Imaging Telescope。SOHO衛星に搭載された極端紫外線望遠鏡
+i00050
+#title=ELF
+b1Extremely Low Frequency(30-3000 Hz)
+i00051
+#title=Equatorial Electrojet
+b1赤道上空の高度100-115 kmの電離層を流れる薄い電流層
+i00052
+#title=EUV
+b1Extreme Ultra-Violet
+i00053
+#title=F10.7
+b1波長が10.7センチメートル(周波数2.8GHz)の太陽電波強度。太陽黒点数と正の相関があり、太陽黒点数とともに太陽活動を表す指標として使われている。
+i00055
+#title=フィラメント
+b1Filament。暗条。彩層の上部に見られる高密度の大規模構造。水素のＨα線で長くて暗い線上の領域として観測される。
+i00056
+#title=フォーブッシュ減少
+b1Forbush Decrease。地球で観測される銀河宇宙線が惑星間空間擾乱との相互作用により減少する現象
+i00057
+#title=FoEs
+b1Es層の臨界周波数
+i00058
+#title=FoF2
+b1F2層の臨界周波数
+i00059
+#title=FOV
+b1Field Of View
+i00060
+#title=フレア
+b1Flare。磁場の歪として蓄えられていたエネルギーが、磁場の再結合(リコネクション)により開放される現象
+i00061
+#title=GBO
+b1Ground Based Observatory。地上観測
+i00062
+#title=GEO
+b1Geostationary Earth Orbit。静止軌道
+i00063
+#title=GIC
+b1Geomagnetically Induced Current。地磁気じょう乱により、電力線やパイプラインに誘起される電流。
+i00064
+#title=GOES
+b1Geostationary Operational Environmental Satellite。米国の気象衛星。
+i00065
+#title=GPS
+b1Global Positioning System。複数の周回衛星からの電波を受信して測位を行うシステム
+i00066
+#title=GLE
+b1Ground Level Enhancement。地上のモニターで太陽起源の高エネルギー粒子が観測される現象。
+i00067
+#title=GSFC
+b1Goddard Space Flight Center
+i00068
+#title=Heliosphere
+b1太陽圏参照
+i00069
+#title=HF
+b1High-Frequency。3～30MHzの電波。短波。
+i00070
+#title=HFドップラー観測
+b1電離層によって反射される短波(HF)帯の電波のドップラー効果による周波数の変化により電離層の状態を観測する
+i00071
+#title=白色光
+b1White light。太陽光の可視光部分
+i00072
+#title=半暗部
+b1Penumbra。黒点群で暗部の周辺に見られる比較的明るい領域
+i00073
+#title=放射線帯
+b1Radiation belt。荷電粒子(電子やプロトンなど)がトラップされている地球を取り巻くリング状の領域
+i00074
+#title=ヘルメット・ストリーマ
+b1Helmet streamer。閉じた磁場を持つ明るいコロナの構造
+i00075
+#title=HXR
+b1Hard X-Ray
+i00076
+#title=HXT
+b1Hard X-ray Telescope
+i00077
+#title=Ice Age
+b1An ice age, or more precisely, a glacial age, is a period of long-term reduction in the temperature of the Earth's surface and atmosphere, resulting in the presence or expansion of continental ice sheets, polar ice sheets and alpine glaciers. 
+i00078
+#title=IGRF
+b1International Geomagnetic Reference Field
+i00079
+#title=Image
+b1Imager for Magnetospheric to Aurora Global Exploration
+i00080
+#title=IMF
+b1Interplanetary Magnetic Field。惑星間空間磁場
+i00081
+#title=Ionosphere
+b1電離層参照
+i00082
+#title=IPS
+b1Interplanetary scintillation。惑星間空間シンチレーション参照
+i00083
+#title=IRI
+b1International Reference Ionosphere。標準電離層モデルの一つ。
+i00084
+#title=IZMEM
+b1Izmiran Electrodynamic Model
+i00085
+#title=磁気圏
+b1Magantosphere。磁場を持った地球などの惑星周辺に形成される磁場領域
+i00086
+#title=磁気圏尾部
+b1Magnetotail。太陽風との相互作用により磁気圏が太陽とは反対側に彗星の尾のように引き延ばされた領域
+i00087
+#title=JST
+b1Japan Standard Time。日本標準時
+i00088
+#title=Kp指数
+b1オーロラ帯よりやや赤道側に分布する12の地磁気観測所で観測された3時間毎の地磁気水平成分の乱れを指数化し平均を取ったもの
+i00089
+#title=ケルビン・ヘルムホルツ不安定
+b1KH不安定。速度シアによって不安定性が生じ、渦が発達する。地球磁気圏では、この不安定によって異常粘性が生じ、太陽風の運動量の一部が磁気圏内に輸送され、磁気圏内のプラズマ対流の要因となっている。
+i00090
+#title=LEO
+b1Low Earth Orbit。低高度地球周回軌道。
+i00091
+#title=LF
+b1Low Frequency。周波数が30-300 kHzの電波
+i00092
+#title=LDE
+b1Long Duration Event。継続時間の長いX線フレア。
+i00093
+#title=マグネトシース
+b1Magnetosheath。bow shockとmagnetopauseの間の領域。bow shockを通過するときに加熱及び減速された太陽風プラズマが存在する領域。
+i00094
+#title=Magnetic flux rope
+b1磁気ロープ。惑星間空間磁場(IMF)の方向が1～2日程度かけて滑らかに回転する現象を説明するために考えられた太陽風中の構造。
+i00095
+#title=マグネトポーズ
+b1Magnetopause。太陽風と磁気圏の境界領域
+i00096
+#title=Magnetic neutral line
+b1磁気中性線
+i00097
+#title=Magnetosphere
+b1磁気圏参照
+i00098
+#title=Magneto tail
+b1磁気圏尾部参照
+i00099
+#title=MIDI
+b1Michelson Doppler Imagner
+i00100
+#title=MSM
+b1The Rice University Magnetospheric Specification Model
+i00101
+#title=NASA
+b1National Aeronautics and Space Administration
+i00102
+#title=NOAA
+b1National Oceanographic and Atmosphere Administration。米国海洋大気局
+i00103
+#title=Northern Lights
+b1北半球高緯度帯で観測されるオーロラ
+i00104
+#title=黄道面
+b1Ecliptic plane。地球が太陽の周りを公転している軌道面
+i00105
+#title=オゾン
+b1Ozone。酸素原子３個よりなる分子(O3)
+i00106
+#title=オゾン層
+b1Ozone layer。地表から20～60kmの領域に形成されるオゾン濃度が大きい領域で、太陽紫外線が地表に到達するのを防いでいる
+i00107
+#title=オーロラ
+b1Aurora。磁気圏尾部で加速された荷電粒子が地球大気と衝突して出す発光現象
+i00108
+#title=オーロラ・オバール
+b1Aurora oval。オーロラが頻繁に観測されるリング状の領域
+i00109
+#title=PCA
+b1Polar Cap Absorption。太陽からの高エネルギー粒子の影響で、極域の電離層での電波の吸収が大きくなる現象。
+i00110
+#title=Penumbra
+b1半暗部
+i00111
+#title=Photosphere
+b1光球、可視光線で見たときの太陽の表面、温度は６千度
+i00112
+#title=PPI
+b1Preliminary Positive Impulse
+i00113
+#title=PRI
+b1Preliminary Reverse Impulse
+i00114
+#title=プラージ
+b1Plage。黒点群などの太陽活動領域の上空に形成される彩層中の明るい高密度領域
+i00115
+#title=プラズマ
+b1Plasma。完全電離したガス
+i00116
+#title=プロトン
+b1陽子、Proton。水素イオン
+i00117
+#title=プロミネンス
+b1Prominence。紅炎。
+i00118
+#title=Radiation belt
+b1放射線帯
+i00119
+#title=Radio burst
+b1電波バースト
+i00120
+#title=recurrence
+b1回帰性
+i00121
+#title=ROI
+b1Region Of Interest
+i00122
+#title=SAA
+b1South Atlantic Anomaly。ブラジル上空付近で地磁気が弱いため、放射線帯が地上250km付近の低いところに位置している領域。
+i00123
+#title=sector boundary
+b1セクター境界。惑星間空間磁場(IMF)の極性が変化するところ。
+i00124
+#title=SEP
+b1Solar Energetic Particle
+i00125
+#title=SFE
+b1Solar Flare Effect
+i00126
+#title=SG 
+b1緩始型地磁気嵐
+i00127
+#title=SI
+b1Sudden Impulse
+i00128
+#title=SID
+b1Sudden Ionospheric Disturbance。地球の昼側で太陽フレアによるX線のためにD層領域が電離され、吸収のため短波通信に障害を起こす現象で、数分から数時間程度の継続時間をもっている。｢デリンジャー現象｣とも呼ばれている。
+i00129
+#title=SEU
+b1Single Event Upset。高エネルギー荷電粒子が衛星搭載の集積回路中を通過すると、その電離作用によって発生した電荷により集積回路内に偽の電気的パルスが発生し、誤動をすることがある。これを｢シングルイベントアップセット｣と呼ぶ。
+i00130
+#title=彩層
+b1Chromosphere。光球とコロナの間に位置する約１万度の薄い大気層
+i00131
+#title=STEREO
+b1Solar Terrestrial Relations Observatory
+i00132
+#title=Sunspot
+b1太陽黒点参照
+i00133
+#title=サージ
+b1Surges。太陽の磁気ループやプロミネンス物質が高速で放出される現象
+i00134
+#title=ショック
+b1Shock wave。衝撃波
+i00135
+#title=水素イオン
+b1プロトン
+i00136
+#title=静止軌道
+b1Geosynchronous orbit。地球半径の6.6倍の位置で地球の自転周期と同じ周期をもつ人工衛星の軌道
+i00137
+#title=成層圏
+b1Stratosphere。地上から15～50ｋｍの地球大気層。温度が高さとともに上昇する領域
+i00138
+#title=SOHO
+b1Solar and Heliospheric Observatory
+i00139
+#title=Solar Cycle
+b1The solar cycle (or solar magnetic activity cycle) is the periodic change in the sun's activity (including changes in the levels of solar radiation and ejection of solar material) and appearance (visible in changes in the number of sunspots, flares, and other visible manifestations). Solar cycles have a duration of about 11 years. They have been observed (by changes in the sun's appearance and by changes seen on Earth, such as auroras) for hundreds of years.
+i00140
+#title=Solar maximum
+b1太陽活動極大期
+i00141
+#title=Solar minimum
+b1太陽活動極小期
+i00142
+#title=スポラディックE
+b1Sporadic E。局部的に発生する電子密度の濃い突発性の電離層。日本付近では夏季に多く発生し、VHF帯くらいまでの電波の異常伝搬により混信障害を引き起こすことがある。
+i00143
+#title=Sq
+b1地磁気の日変化
+i00144
+#title=SSC
+b1Sudden Storm Commencement。急始型地磁気嵐
+i00145
+#title=SUMMER
+b1SOHO衛星搭載の観測装置、Solar Ultraviolet Measurements of Emitted Radiation
+i00146
+#title=SWF
+b1Short Wave Fade。SID参照
+i00147
+#title=SXR
+b1Soft X-Ray。軟X線
+i00148
+#title=SXT
+b1Soft X-ray Telescope。｢陽光｣衛星搭載の軟X線望遠鏡
+i00149
+#title=大気光
+b1地球の超高層大気中の原子や分子間の衝突や反応によって起こる発光現象
+i00150
+#title=対流圏
+b1Troposphere。日常の気象現象の大部分が起きている地表から15km付近までの領域
+i00151
+#title=太陽黒点
+b1Sunspot。磁場が強いために対流による熱の輸送が妨げられ周囲の光球より低温となっているため暗く見える領域
+i00152
+#title=太陽圏
+b1Heliosphere。太陽風の勢力圏
+i00153
+#title=太陽風
+b1Solar wind。太陽から吹き出されるプラズマの流れ
+i00154
+#title=TRACE
+b1NASAの太陽観測衛星、Transition Region and Coronal Explorer
+i00155
+#title=Tsyganenko external-source field model
+b1磁気圏の磁場を記述する標準的なモデル。
+i00156
+#title=地磁気嵐
+b1Geomagnetic storm。CMEやコロナホールによる太陽風の擾乱が原因となる地球磁場の擾乱。地磁気嵐に伴って、オーロラが発生したり、無線通信が障害を受けたりする。
+i00157
+#title=TEC
+b1Total Electron Content。全電子数
+i00158
+#title=TID
+b1Traveling Ionospheric Disturbance。伝搬性の電離層擾乱
+i00159
+#title=TIME-GCM
+b1Thermosphere-Ionosphere-Mesosphere-Electrodynamic General Circulation Model
+i00160
+#title=テンフレアー
+b1波長10.7cmの太陽電波バーストとして観測されたフレア
+i00161
+#title=天文単位
+b1Astronomical Unit。太陽－地球間の平均距離。1億5千万ｋｍ
+i00162
+#title=宇宙線
+b1Cosmic Ray。星間空間を飛び回っている高いエネルギーの粒子
+i00163
+#title=UHF
+b1Ultra High Frequency(300 MHz ～ 3 GHz)
+i00164
+#title=Ulysses
+b1欧州宇宙機構(ESA)によって打ち上げられた宇宙探査機で、太陽圏の広い緯度範囲における惑星間空間物質や太陽風の研究を目的としている。
+i00165
+#title=Umbra
+b1暗部
+i00166
+#title=upper atmosphere
+b1超高層大気
+i00167
+#title=UT
+b1Universal Time。世界標準時
+i00168
+#title=UV
+b1Ultra Violet。紫外線。波長が、0.01～0.1ミクロンの電磁放射
+i00169
+#title=UVCS
+b1SOHO衛星に搭載されたUltraViolet Coronal Spectrometer
+i00170
+#title=ヴァン・アレン帯
+b1Van Allen belt。放射線帯
+i00171
+#title=VHF
+b1Very High Frequency(30-300 MHz)
+i00172
+#title=VLF
+b1Very Low Frequency(3-30 kHz)
+i00173
+#title=WBS
+b1｢陽光｣衛星に搭載されたWide Band Spectrometer
+i00174
+#title=White light
+b1白色光
+i00175
+#title=White-light flare
+b1白色光フレア
+i00176
+#title=惑星間空間磁場
+b1Interplanetary Magnetic Field(IMF)
+i00177
+#title=惑星間空間シンチレーション
+b1Interplanetary scintillation, IPS。太陽風密度の変動のために太陽風中を通過してくる星からの電波が瞬いて観測される現象。
+i00178
+#title=X-ray
+b1X-radiation (composed of X-rays) is a form of electromagnetic radiation.
+i00179
+#title=XBP
+b1X-ray Bright Point
+i00180
+#title=陽光
+b1Yohkoh。日本の宇宙科学研究所によって1991年夏に打ち上げられた太陽観測衛星。軟X線望遠鏡(SXT)や硬X線望遠鏡(HXT)などの観測装置を搭載している。
+i00181
+#title=Zurich sunspot classification
+b1白色光観測に基づいた黒点群の分類
+i00182
+#title=Disturbance storm time index
+b1The disturbance storm time (Dst, Kyoto Dst) index is a measure in the context of space weather. It gives information about the strength of the ring current around earth caused by solar protons and electrons.
+i00183
+#title=K index
+b1The K-index quantifies disturbances in the horizontal component of earth's magnetic field with an integer in the range 0-9 with 1 being calm and 5 or more indicating a geomagnetic storm.
+i00184
+#title=WDC
+b1The World Data Centre (WDC) system was created to archive and distribute data collected from the observational programmes of the 1957-1958 International Geophysical Year by the International Council of Science (ICSU).
+i00185
+#title=WDS
+b1World Data System
+i00186
+#title=THEMIS
+b1The Time History of Events and Macroscale Interactions during Substorms (THEMIS) mission was originally a constellation of five NASA satellites (THEMIS A through THEMIS E) to study energy releases from Earth's magnetosphere known as substorms, magnetic phenomena that intensify auroras near Earth's poles. The name of the mission is an acronym alluding to the Titan, Themis.
+i00187
+#title=Plasma
+b1Plasma (from Greek πλάσμα, "anything formed"[1]) is one of the four fundamental states of matter (the others being solid, liquid, and gas).
+i00188
+#title=Thermosphere
+b1The thermosphere is the layer of the Earth's atmosphere directly above the mesosphere and directly below the exosphere. Within this layer, ultraviolet radiation (UV) causes ionization. 
+i00189
+#title=Ionosphere
+b1The ionosphere is a part of the upper atmosphere, from about 85 km to 600 km altitude, comprising portions of the mesosphere, thermosphere and exosphere, distinguished because it is ionized by solar radiation.
+i00190
+#title=Exosphere
+b1The exosphere (Ancient Greek: ἔξω éxō "outside, external, beyond", Ancient Greek: σφαῖρα sphaĩra "sphere") is a thin, atmosphere-like volume surrounding a planetary body where molecules are gravitationally bound to that body, but where the density is too low for them to behave as a gas by colliding with each other. In the case of bodies with substantial atmospheres, such as the Earth's atmosphere, the exosphere is the uppermost layer, where the atmosphere thins out and merges with interplanetary space. It is located directly above the Thermosphere.
+i00191
+#title=Mesosphere
+b1The mesosphere (/ˈmɛsoʊsfɪər/; from Greek mesos = middle and sphaira = ball) is the layer of the Earth's atmosphere that is directly above the stratosphere and directly below the thermosphere.
+i00192
+#title=Stratosphere
+b1The stratosphere (/ˈstrætəsfɪər/) is the second major layer of Earth's atmosphere, just above the troposphere, and below the mesosphere.
+i00193
+#title=Troposphere
+b1The troposphere is the lowest portion of Earth's atmosphere. It contains approximately 80% of the atmosphere's mass and 99% of its water vapor and aerosols.
+i00194
+#title=IUGONET
+b1Inter-university Upper atmosphere Global Observation NETwork
+i00195
+#title=Super Dual Auroral Radar Network
+b1The Super Dual Auroral Radar Network (SuperDARN) is an international radar network for studying the upper atmosphere and ionosphere, comprising eleven radars in the northern hemisphere and seven in the southern hemisphere that operate in the High Frequency (HF) bands between 8.0 MHz (37m) and 22.0 MHz (14m).
+i00196
+#title=Magnetometer
+b1A magnetometer is a measuring instrument used to measure the strength and perhaps the direction of magnetic fields.
+i00197
+#title=Heliograph
+b1A heliograph (Greek: Ἥλιος helios, meaning "sun", and γραφειν graphein, meaning "write") is a wireless solar telegraph that signals by flashes of sunlight (generally using Morse code) reflected by a mirror. The flashes are produced by momentarily pivoting the mirror, or by interrupting the beam with a shutter. 
+i00198
+#title=COSPAR international reference atmosphere
+b1The COSPAR International Reference Atmosphere (CIRA) is an empirical model of the atmosphere of Earth. 
+b1It consists of a set of tables of average air pressures, altitudes and temperatures.
+i00199
+#title=EISCAT
+b1EISCAT is an acronym for the European Incoherent Scatter Scientific Association. 
+b1It operates three incoherent scatter radar systems, at 224 MHz, 931 MHz in Northern Scandinavia and one at 500 MHz on Svalbard, used to study the interaction between the Sun and the Earth as revealed by disturbances in the ionosphere and magnetosphere. 
+i00200
+#title=Magnetic Data Acquisition System
+b1Magnetic Data Acquisition System (abbr. MAGDAS) is a system of 50 realtime magnetometers that are being deployed by Kyushu Sangyo University of Fukuoka, Japan, as part of Japan's leading contribution to International Heliophysical Year of the United Nations.
+i00201
+#title=Jupiter
+b1Jupiter is the fifth planet from the Sun and the largest planet in the Solar System.
+i00202
+#title=Solar System
+b1The Solar System[a] consists of the Sun and its planetary system of eight planets, their moons, and other non-stellar objects.[b] It formed 4.6 billion years ago from the collapse of a giant molecular cloud.
+i00203
+#title=Sunsplot
+b1Sunspots are temporary phenomena on the photosphere of the Sun that appear visibly as dark spots compared to surrounding regions. They are caused by intense magnetic activity, which inhibits convection by an effect comparable to the eddy current brake, forming areas of reduced surface temperature. Like magnets, they also have two poles.
+i00204
+#title=Solar maximum
+b1Solar maximum or solar max is a normal period of greatest solar activity in the 11 year solar cycle of the Sun. 
+i00205
+#title=Mars
+b1Mars is the fourth planet from the Sun and the second smallest planet in the Solar System.
+i00206
+#title=International Council for Science
+b1The International Council for Science (ICSU) is an international non-governmental organization devoted to international cooperation in the advancement of science.
+i00207
+#title=Committee on Data for Science and Technology
+b1The Committee on Data for Science and Technology (CODATA) was established in 1966 as an interdisciplinary committee of the International Council for Science. 
+i00208
+#title=Japan Meteorological Agency
+b1The Japan Meteorological Agency, frequently abbreviated to JMA, is an agency of Ministry of Land, Infrastructure, Transport and Tourism
+i00209
+#title=National Astronomical Observatory of Japan
+b1The National Astronomical Observatory of Japan (NAOJ) is an astronomical research organisation comprising several facilities in Japan, as well as an observatory in Hawaii.

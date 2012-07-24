@@ -1,15 +1,19 @@
-<project name="GETAssoc" default="all" basedir=".">
-  <property file="build.properties"/>
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="GETAssoc" default="all" basedir="." xmlns:ac="antlib:net.sf.antcontlib">
   <property environment="env"/>
+  <property file="build.properties"/>
 
-  <condition property="isUnix">
-    <os family="unix"/>
-  </condition>
+  <taskdef resource="net/sf/antcontrib/antlib.xml">
+    <classpath>
+      <pathelement location="/usr/share/java/lib/ant-contrib.jar"/>
+    </classpath>
+  </taskdef>
 
-  <target name="all" depends="clean, init, expat, icu, darts, chasen, ipadic, convert, stmd, getassoc, gss3, iptables, itb, final_message"/>
+  <target name="all" depends="initial_message, clean, init, expat, icu, darts, chasen, ipadic, stmd, getassoc, gss3, itb, iptables, gem, demo, final_message" description="Install all"/>
 
-  <target name="clean">
+  <target name="clean" description="clean">
     <delete dir="${src}"/>
+    <delete dir="/opt"/>
     <exec executable="/etc/init.d/httpd">
       <arg line="stop"/>
     </exec>
@@ -18,25 +22,25 @@
     </exec>
   </target>
 
-  <target name="init">
-    <property environment="env"/>
-<!--
-    <echo file="/etc/bashrc" message="export GETAROOT=/usr/local/geta&#x0A;" append="yes"/>
-    <exec executable="source">
-      <arg line="~/.bashrc"/>
-    </exec>
--->
+  <target name="clean_itb" description="clean itb and temporal files">
+    <delete file="${tmp}/*.tmp1"/>
+    <delete file="${tmp}/*.tmp2"/>
+    <delete file="${tmp}/*.itb"/>
+  </target>
+
+  <target name="init" description="init">
     <mkdir dir="${src}"/>
     <exec executable="setenforce">
       <arg line="0"/>
     </exec>
     <exec executable="yum">
-      <arg line="-y install gcc gcc-c++ bison expat-devel libicu-devel rpm-build httpd"/>
+      <arg line="-y install gcc gcc-c++ bison expat-devel libicu-devel rpm-build ruby ruby-devel rubygems libxml2-devel libxslt-devel wireshark wireshark-devel wireshark-gnome lib-curl"/>
     </exec>
   </target>
 
-  <target name="expat">
+  <target name="expat" description="Install expat">
     <get src="${src_expat}" dest="${dst_expat}" usetimestamp="true"/>
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec dir="${src}" executable="tar">
       <arg line="zxf ${expat}"/>
     </exec>
@@ -52,9 +56,9 @@
     <exec executable="ldconfig"/>
   </target>
 
-  <target name="icu">
+  <target name="icu" description="Install icu">
     <get src="${src_icu}" dest="${dst_icu}" usetimestamp="true"/>
-
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec dir="${src}" executable="tar">
       <arg line="zxf ${icu}"/>
     </exec>
@@ -68,9 +72,9 @@
     <exec executable="ldconfig"/>
   </target>
 
-  <target name="darts">
+  <target name="darts" description="Install darts">
     <get src="${src_darts}" dest="${dst_darts}" usetimestamp="true"/>
-
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec dir="${src}" executable="tar">
       <arg line="xzf ${darts}"/>
     </exec>
@@ -83,9 +87,9 @@
     </exec>
   </target>
 
-  <target name="chasen">
+  <target name="chasen" description="Install chasen">
     <get src="${src_chasen}" dest="${dst_chasen}" usetimestamp="true"/>
-
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec dir="${src}" executable="tar">
       <arg line="zxf ${chasen}"/>
     </exec>
@@ -99,44 +103,56 @@
     <exec executable="ldconfig"/>
   </target>
 
-  <target name="ipadic">
+  <target name="ipadic" description="Install ipadic">
     <get src="${src_ipadic}" dest="${dst_ipadic}" usetimestamp="true"/>
-
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec dir="${src}" executable="tar">
       <arg line="zxf ${ipadic}"/>
     </exec>
     <exec dir="${src}/${ipadic_prefix}" executable="./configure">
     </exec>
-  </target>
-
-  <target name="convert">
-    <copy file="convert.sh" todir="${src}/${ipadic_prefix}"/>
-    <exec executable="chmod">
-      <arg line="+x ${src}/${ipadic_prefix}/convert.sh"/>
+    <replace file="${src}/${ipadic_prefix}/Makefile" token="$(MKDICDIR)/makemat" value="$(MKDICDIR)/makemat -i w"/>
+    <replace file="${src}/${ipadic_prefix}/Makefile" token="$(MKDICDIR)/makeda chadic *.dic" value="$(MKDICDIR)/makeda -i w chadic *.dic"/>
+    <!-- from EUC-JP to UTF8 -->
+    <for list="Adj.dic,Adnominal.dic,Adverb.dic,Auxil.dic,Conjunction.dic,Filler.dic,Interjection.dic,Noun.adjv.dic,Noun.adverbal.dic,Noun.demonst.dic,Noun.dic,Noun.nai.dic,Noun.name.dic,Noun.number.dic,Noun.org.dic,Noun.others.dic,Noun.place.dic,Noun.proper.dic,Noun.verbal.dic,Onebyte.dic,Others.dic,Postp-col.dic,Postp.dic,Prefix.dic,Suffix.dic,Symbol.dic,Verb.dic" param="dic">
+      <sequential>
+	<echo message="@{dic}"/>
+	<exec executable="bash" dir="${src}/${ipadic_prefix}">
+	  <arg value="-c"/>
+	  <arg value="cat @{dic} | iconv -f EUC-JP -t UTF8 -o @{dic}"/>
+	</exec>
+      </sequential>
+    </for>
+    <!-- -->
+    <for list="cforms.cha,connect.cha,ctypes.cha,grammar.cha,version.cha" param="cha">
+      <sequential>
+	<echo message="@{cha}"/>
+	<exec executable="bash" dir="${src}/${ipadic_prefix}">
+	  <arg value="-c"/>
+	  <arg value="cat @{cha} | iconv -f EUC-JP -t UTF8 -o @{cha}"/>
+	</exec>
+      </sequential>
+    </for>
+    <!-- -->
+    <exec executable="make" dir="${src}/${ipadic_prefix}">
     </exec>
-    <exec executable="./convert.sh" dir="${src}/${ipadic_prefix}">
-    </exec>
-    <exec executable="chasen-config" outputproperty="chasen_path">
-      <arg line="--mkchadic"/>
-    </exec>
-    <exec executable="${chasen_path}/makemat" dir="${src}/${ipadic_prefix}" >
-      <arg line="-i w"/>
-    </exec>
-    <exec executable="${chasen_path}/makeda" dir="${src}/${ipadic_prefix}">
-      <arg line="-i w chadic ${src}/${ipadic_prefix}/*.dic"/>
-    </exec>
-    <exec executable="make">
+    <exec executable="make" dir="${src}/${ipadic_prefix}">
       <arg line="install"/>
     </exec>
-    <exec executable="iconv" dir="${src}/${ipadic_prefix}">
-      <arg line="-f euc-jp -t utf-8 chasenrc > chasenrc.tmp"/>
+    <!-- -->
+    <exec executable="bash" dir="/usr/local/etc">
+      <arg value="-c"/>
+      <arg value="cat chasenrc | iconv -f EUC-JP -t UTF8 -o chasenrc"/>
     </exec>
-    <move file="${src}/${ipadic_prefix}/chasenrc.tmp" tofile="/usr/local/etc/chasenrc"/>
+    <exec executable="bash" dir="/usr/local/lib/chasen/dic/ipadic">
+      <arg value="-c"/>
+      <arg value="cat chasenrc | iconv -f EUC-JP -t UTF8 -o chasenrc"/>
+    </exec>
   </target>
 
-  <target name="stmd">
+  <target name="stmd" description="Install stmd">
     <get src="${src_stmd}" dest="${dst_stmd}" usetimestamp="true"/>
-
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec dir="${src}" executable="tar">
       <arg line="zxf ${stmd}"/>
     </exec>
@@ -151,24 +167,31 @@
     <exec dir="${src}/${stmd_prefix}/t" executable="./chk">
       <arg line="tst2.xml"/>
     </exec>
-  
     <echo file="/etc/syslog.conf" message="#stmd&#x0A;" append="yes"/>
     <echo file="/etc/syslog.conf" message="local0.* /var/log/stmd.log&#x0A;" append="yes"/>
-
     <exec dir="${src}" executable="touch">
       <arg line="/var/log/stmd.log"/>
     </exec>
     <exec dir="/sbin" executable="service">
-      <arg line="syslog restart"/>
+      <arg line="rsyslog restart"/>
     </exec>
-    <exec dir="${src}" executable="stmd">
-      <arg line="-d -u /tmp/stmd.sock"/>
+    <echo file="/etc/services" message="stmd            1234/tcp                # stmd" append="yes"/>
+    <exec executable="stmd">
+      <arg line="-d -u ${tmp}/stmd.sock"/>
+    </exec>
+    <copy file="etc/init.d/stmd" todir="/etc/init.d"/>
+    <chmod file="/etc/init.d/stmd" perm="gou+rx"/>
+    <exec executable="chkconfig">
+      <arg line="--add stmd"/>
+    </exec>
+    <exec executable="chkconfig">
+      <arg line="stmd on"/>
     </exec>
   </target>
 
-  <target name="getassoc">
+  <target name="getassoc" description="Install getassoc">
     <get src="${src_getassoc}" dest="${dst_getassoc}" usetimestamp="true"/>
-
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec dir="${src}" executable="tar">
       <arg line="zxf ${getassoc}"/>
     </exec>
@@ -187,15 +210,20 @@
     <antcall target="httpd"/>
   </target>
 
-  <target name="gss3">
+  <target name="gss3" description="Install gss3">
+    <exec executable="/bin/bash" outputproperty="ip_address">
+      <arg value="-c"/>
+      <arg value="/sbin/ifconfig | awk '{if (NR==2){sub(&quot;addr:&quot;,&quot;&quot;,$2);print $2}}'"/>
+    </exec>
     <mkdir dir="${geta_client_dir}"/>
     <get src="${src_load.gif}" dest="${dst_load.gif}" usetimestamp="true"/>
     <get src="${src_gss3_html}" dest="${dst_gss3_html}" usetimestamp="true"/>
+    <replace file="${dst_gss3_html}" token="西表島" value="Active Region"/>
     <get src="${src_gss3_js}" dest="${dst_gss3_js}" usetimestamp="true"/>
     <replace file="${dst_gss3_js}" dir="${geta_client_dir}" token="gss3.url = 'http://getassoc.cs.nii.ac.jp/getassoc/gss3';" value="gss3.url = 'http://${ip_address}/getassoc/gss3';"/>
   </target>
 
-  <target name="httpd">
+  <target name="httpd" description="Start httpd">
     <exec executable="/etc/init.d/httpd">
       <arg line="start"/>
     </exec>
@@ -204,7 +232,7 @@
     </exec>
   </target>
 
-  <target name="iptables">
+  <target name="iptables" description="Set iptables">
     <exec executable="iptables" dir="/sbin">
       <arg line="-I INPUT 5 -p tcp --dport http -j ACCEPT"/>
     </exec>
@@ -216,12 +244,75 @@
     </exec>
   </target>
 
-  <target name="itb">
-    <mkdir dir="${getaroot}"/>
+  <target name="initial_message" description="Display initial message">
+    <echo message="###&#x0A;###&#x0A;This installation process takes 20 minutes at least.&#x0A;###&#x0A;###&#x0A;"/>
   </target>
 
-  <target name="final_message">
-    <echo message="###&#x0A;###&#x0A;###&#x0A;Access to http://localhost/gss3.html?property=hoge&#x0A;###&#x0A;###&#x0A;###&#x0A;"/>
+  <target name="final_message" description="Display final message">
+    <exec executable="/bin/bash" outputproperty="ip_address">
+      <arg value="-c"/>
+      <arg value="/sbin/ifconfig | awk '{if (NR==2){sub(&quot;addr:&quot;,&quot;&quot;,$2);print $2}}'"/>
+    </exec>
+    <echo message="###&#x0A;###&#x0A;Access to http://${ip_address}/geta_client/gss3.html&#x0A;&#x0A;  and&#x0A;&#x0A;Access to http://${ip_address}/index.html&#x0A;###&#x0A;###&#x0A;"/>
+  </target>
+ 
+  <target name="itb" description="Create itb file">
+    <exec executable="/bin/sh">
+      <arg value="-c"/>
+      <arg value="/home/getassoc/g/wbin/stp -b /home/getassoc/g sample title &lt; itb/sample_utf8.itb"/>
+    </exec>
+  </target>
+
+  <target name="gem" description="Install gem.">
+    <for list="google-spreadsheet-ruby,wikipedia-client,curb" param="package">
+      <sequential>
+	<exec executable="gem">
+	  <arg value="install"/>
+	  <arg value="@{package}"/>
+	</exec>
+      </sequential>
+    </for>
+  </target>
+
+  <target name="demo" description="Install demo.">
+    <copy file="html/index.html" todir="/var/www/html"/>
+    <copy file="html/fig.svg" todir="/var/www/html"/>
+  </target>
+
+  <target name="GoogleSpreadSheet2itb" description="Install GoogleSpreadSheet2itb.">
+    <exec executable="bash" dir="rb">
+      <arg value="-c"/>
+      <arg value="./GoogleSpreadSheet2itb.rb &gt; ${tmp}/GoogleSpreadSheet.itb"/>
+    </exec>
+    <exec executable="/bin/sh">
+      <arg value="-c"/>
+      <arg value="/home/getassoc/g/wbin/stp -b /home/getassoc/g stp title &lt; ${tmp}/GoogleSpreadSheet.itb"/>
+    </exec>
+  </target>
+
+  <target name="WikiCloth" description="Install WikiCloth.">
+    <get src="${src_wikicloth}" dest="${dst_wikicloth}" usetimestamp="true"/>
+    <unzip src="${dst_wikicloth}" dest="/tmp"/>
+  </target>
+
+  <target name="eclipse" description="Install eclipse as general user">
+    <get src="${src_eclipse}" dest="${dst_eclipse}" usetimestamp="yes"/>
+    <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
+    <exec executable="tar" dir="${tmp}">
+      <arg value="xvzf"/>
+      <arg value="${dst_eclipse}"/>
+      <arg value="--directory"/>
+      <arg value="${env.HOME}/Documents"/>
+    </exec>
+    <echo message="&#x0A;###&#x0A;###&#x0A;&#x0A;Please type&#x0A;&#x0A;~/eclipse.sh&#x0A;&#x0A;###&#x0A;###&#x0A;"/>
+    <!-- -->
+    <echo message="#!/bin/env bash&#x0A;" file="${env.HOME}/eclipse.sh"/>
+    <echo message="${env.HOME}/Documents/eclipse/eclipse -data ${env.HOME}/Judas/workspace" file="${env.HOME}/eclipse.sh" append="yes"/>
+    <chmod file="${env.HOME}/eclipse.sh" perm="+x"/>
+  </target>
+
+  <target name="rdt" description="Install Ruby Development Toolkit (RDT) for Eclipse">
+
   </target>
 
 </project>
