@@ -2,11 +2,22 @@
 filename = ARGV[0]
 file = open(filename)
 text = file.read
-print text
 file.close
-
-pos = text.index("<h3 align=\"center\">                               Abstract</h3>")
-print pos
-pos2 = text.index("<hr>\n<table width=100\%>")
-print pos2
-print text[$pos2,$pos1]
+#
+# title
+#
+pos1 = text.index("<meta name=\"dc.title\" content=\"")
+pos2 = text.index("<meta name=\"dc.creator\"")
+title = text[pos1,pos2-pos1]
+title = title.gsub("<meta name=\"dc.title\" content=\"","")
+title = title.gsub("\" />","")
+print title
+#
+# abstract
+#
+pos1 = text.index("Abstract</h3>")
+pos2 = text.rindex("<table width=100\%>")
+abstract = text[pos1,pos2-pos1]
+abstract = abstract.gsub("Abstract</h3>","")
+abstract = abstract.gsub("<hr>","")
+print abstract
