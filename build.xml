@@ -295,7 +295,7 @@
     <unzip src="${dst_wikicloth}" dest="/tmp"/>
   </target>
 
-  <target name="eclipse" description="Install eclipse as general user">
+  <target name="eclipse" description="Install eclipse">
     <get src="${src_eclipse}" dest="${dst_eclipse}" usetimestamp="yes"/>
     <!-- To stay away to use untar task because untar task for ant 1.7.1 is buggy. -->
     <exec executable="tar" dir="${tmp}">
