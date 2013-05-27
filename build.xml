@@ -212,15 +212,28 @@
 
   <target name="gss3" description="Install gss3">
     <exec executable="/bin/bash" outputproperty="ip_address">
-      <arg value="-c"/>
+      <arg value="-c" />
       <arg value="/sbin/ifconfig | awk '{if (NR==2){sub(&quot;addr:&quot;,&quot;&quot;,$2);print $2}}'"/>
+    </exec>
+    <exec executable="/bin/bash" outputproperty="ip_address_dns">
+      <arg value="-c" />
+      <arg value="host getassoc.iugonet.org | awk '{print $4}'" />
     </exec>
     <mkdir dir="${geta_client_dir}"/>
     <get src="${src_load.gif}" dest="${dst_load.gif}" usetimestamp="true"/>
     <get src="${src_gss3_html}" dest="${dst_gss3_html}" usetimestamp="true"/>
     <replace file="${dst_gss3_html}" token="西表島" value="Active Region"/>
     <get src="${src_gss3_js}" dest="${dst_gss3_js}" usetimestamp="true"/>
-    <replace file="${dst_gss3_js}" dir="${geta_client_dir}" token="gss3.url = 'http://getassoc.cs.nii.ac.jp/getassoc/gss3';" value="gss3.url = 'http://${ip_address}/getassoc/gss3';"/>
+    <if> <!-- you need ant-contrib -->
+      <equals arg1="${ip_address}" arg2="${ip_address_dns}" /> 
+      <then> <!-- for global network -->
+	<replace file="${dst_gss3_js}" dir="${geta_client_dir}" token="gss3.url = 'http://getassoc.cs.nii.ac.jp/getassoc/gss3';" value="gss3.url = 'http://getassoc.iugonet.org/getassoc/gss3';"/>	
+      </then>
+      <else> <!-- for local network -->
+	<replace file="${dst_gss3_js}" dir="${geta_client_dir}" token="gss3.url = 'http://getassoc.cs.nii.ac.jp/getassoc/gss3';" value="gss3.url = 'http://${ip_address}/getassoc/gss3';"/>
+      </else>
+    </if>
+
   </target>
 
   <target name="httpd" description="Start httpd">
@@ -253,7 +266,7 @@
       <arg value="-c"/>
       <arg value="/sbin/ifconfig | awk '{if (NR==2){sub(&quot;addr:&quot;,&quot;&quot;,$2);print $2}}'"/>
     </exec>
-    <echo message="###&#x0A;###&#x0A;Access to http://${ip_address}/geta_client/gss3.html&#x0A;&#x0A;  and&#x0A;&#x0A;Access to http://${ip_address}/index.html&#x0A;###&#x0A;###&#x0A;"/>
+    <echo message="###&#x0A;###&#x0A;Access to http://${ip_address}/index.html&#x0A;###&#x0A;###&#x0A;"/>
   </target>
  
   <target name="itb" description="Create itb file">
