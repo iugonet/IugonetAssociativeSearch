@@ -16,9 +16,7 @@ puts "@description=iugonet"
 puts "@title=iugonet"
 
 1.upto(ws.num_rows){|i|
-  print "i",i,"\n"
-  print "#title=", ws[i, 1],"\n"
-  print "b1", ws[i, 2],"\n"
+  print "http://adsabs.harvard.edu/abs/", ws[i, 1],"\n"
 }
 
 #print ws.cells
