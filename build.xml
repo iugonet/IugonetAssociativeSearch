@@ -233,7 +233,6 @@
 	<replace file="${dst_gss3_js}" dir="${geta_client_dir}" token="gss3.url = 'http://getassoc.cs.nii.ac.jp/getassoc/gss3';" value="gss3.url = 'http://${ip_address}/getassoc/gss3';"/>
       </else>
     </if>
-
   </target>
 
   <target name="httpd" description="Start httpd">
@@ -266,7 +265,19 @@
       <arg value="-c"/>
       <arg value="/sbin/ifconfig | awk '{if (NR==2){sub(&quot;addr:&quot;,&quot;&quot;,$2);print $2}}'"/>
     </exec>
-    <echo message="###&#x0A;###&#x0A;Access to http://${ip_address}/index.html&#x0A;###&#x0A;###&#x0A;"/>
+    <exec executable="/bin/bash" outputproperty="ip_address_dns">
+      <arg value="-c" />
+      <arg value="host getassoc.iugonet.org | awk '{print $4}'" />
+    </exec>
+    <if> <!-- you need ant-contrib -->
+      <equals arg1="${ip_address}" arg2="${ip_address_dns}" /> 
+      <then> <!-- for global network -->
+	<echo message="###&#x0A;###&#x0A;Access to http://getassoc.iugonet.org/index.html&#x0A;###&#x0A;###&#x0A;"/>
+      </then>
+      <else> <!-- for local network -->
+	<echo message="###&#x0A;###&#x0A;Access to http://${ip_address}/index.html&#x0A;###&#x0A;###&#x0A;"/>
+      </else>
+    </if>
   </target>
  
   <target name="itb" description="Create itb file">
