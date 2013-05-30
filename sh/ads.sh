@@ -10,5 +10,8 @@ fi
 
 ../rb/getAdsPaperListOnGoogleSpreadSheet.rb
 echo "#!/usr/bin/env bash" > createItb.sh
-cat list.txt | awk '{print "curl -o index.html -O ",$0,"; cat index.html"}' >> createItb.sh
-chmod +x createItb.sh
+if [ -a 'list.txt' ]; then
+    cat list.txt | awk '{print "curl -o index.html -O ",$0,"; cat index.html"}' >> createItb.sh
+    chmod +x createItb.sh
+fi
+
