@@ -34,7 +34,7 @@
       <arg line="0"/>
     </exec>
     <exec executable="yum">
-      <arg line="-y install gcc gcc-c++ bison expat-devel libicu-devel rpm-build ruby ruby-devel rubygems libxml2-devel libxslt-devel wireshark wireshark-devel wireshark-gnome lib-curl"/>
+      <arg line="-y install gcc gcc-c++ gcc-gfortran flex bison expat-devel libicu-devel rpm-build ruby ruby-devel rubygems libxml2-devel libxslt-devel wireshark wireshark-devel wireshark-gnome lib-curl"/>
     </exec>
   </target>
 
