@@ -288,7 +288,7 @@
   </target>
 
   <target name="gem" description="Install gem.">
-    <for list="google-spreadsheet-ruby,wikipedia-client,curb" param="package">
+    <for list="google-spreadsheet-ruby,wikipedia-client,curb,ghazel-SystemTimer" param="package">
       <sequential>
 	<exec executable="gem">
 	  <arg value="install"/>
