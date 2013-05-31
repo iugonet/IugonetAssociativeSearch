@@ -4,6 +4,10 @@ file = open(filename)
 text = file.read
 file.close
 #
+#
+#
+print "iXXXXXXX\n"
+#
 # title
 #
 pos1 = text.index("<meta name=\"dc.title\" content=\"")
@@ -23,4 +27,3 @@ abstract = abstract.gsub("Abstract</h3>","")
 abstract = abstract.gsub("<hr>","")
 abstract = abstract.gsub("\n","")
 print "b1=",abstract,"\n"
-
