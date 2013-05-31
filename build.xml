@@ -9,7 +9,7 @@
     </classpath>
   </taskdef>
 
-  <target name="all" depends="initial_message, clean, init, expat, icu, darts, chasen, ipadic, stmd, getassoc, gss3, itb, iptables, gem, demo, final_message" description="Install all"/>
+  <target name="all" depends="initial_message, clean, init, expat, icu, darts, chasen, ipadic, stmd, getassoc, gss3, itb, iptables, gem, web, final_message" description="Install all"/>
 
   <target name="clean" description="clean">
     <delete dir="${src}"/>
@@ -298,7 +298,7 @@
     </for>
   </target>
 
-  <target name="demo" description="Install demo.">
+  <target name="web" description="Install web page">
     <copy file="html/index.html" todir="/var/www/html"/>
     <copy file="html/fig.svg" todir="/var/www/html"/>
   </target>
