@@ -339,13 +339,14 @@
   </target>
 
   <target name="ads" description="Create dictionary from Astronomical Data System">   
+<!--
     <exec executable="bash" dir="rb">
       <arg value="-c"/>
       <arg value="./AdsPaperListOnGoogleSpreadSheet2itb.rb &gt; ${tmp}/AdsPaperListOnGoogleSpreadSheet.itb"/>
-    </exec>
+    </exec>-->
     <exec executable="/bin/sh">
       <arg value="-c"/>
-      <arg value="/home/getassoc/g/wbin/stp -b /home/getassoc/g stp title &lt; ${tmp}/AdsPaperListOnGoogleSpreadSheet.itb"/>
+      <arg value="/home/getassoc/g/wbin/stp -b /home/getassoc/g stp title &lt; itb/ads.itb"/>
     </exec>
   </target>
 
